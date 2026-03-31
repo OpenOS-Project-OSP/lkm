@@ -3,7 +3,7 @@ requires      = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name        = "lkm"
+name        = "linux-kernel-manager"
 version     = "0.1.2"
 description = "Linux Kernel Manager — build, install, and manage kernels across all major distros and architectures"
 readme      = "README.md"
