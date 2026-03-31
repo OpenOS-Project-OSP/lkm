@@ -42,7 +42,7 @@ VERSION="$(python3 -c "import importlib.metadata; print(importlib.metadata.versi
 APPDIR="${REPO_ROOT}/AppDir"
 
 # python-appimage releases: https://github.com/niess/python-appimage/releases
-PYTHON_VERSION="3.12.3"
+PYTHON_VERSION="3.12.12"
 PYTHON_APPIMAGE_URL="https://github.com/niess/python-appimage/releases/download/python3.12/python${PYTHON_VERSION}-cp312-cp312-manylinux2014_${ARCH}.AppImage"
 
 APPIMAGETOOL_URL="https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-${ARCH}.AppImage"
