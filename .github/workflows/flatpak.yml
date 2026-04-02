@@ -59,6 +59,21 @@ jobs:
           flatpak run --command=appstreamcli org.kde.Sdk//6.7 \
             validate pkg/flatpak/io.github.lkm.lkm.metainfo.xml || true
 
+      - name: Check appstreamcli compose requirements
+        run: |
+          if [ ! -f pkg/flatpak/io.github.lkm.lkm.metainfo.xml ]; then
+            echo "Required metainfo file is missing for appstreamcli compose!"
+            exit 1
+          fi
+          if [ ! -f pkg/flatpak/io.github.lkm.lkm.desktop ]; then
+            echo "Required desktop file is missing for appstreamcli compose!"
+            exit 1
+          fi
+          if [ ! -f pkg/flatpak/io.github.lkm.lkm.svg ]; then
+            echo "Required icon file is missing for appstreamcli compose!"
+            exit 1
+          fi
+
       - name: Export bundle
         if: startsWith(github.ref, 'refs/tags/')
         run: |
