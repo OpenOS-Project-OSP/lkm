@@ -57,7 +57,7 @@ jobs:
       - name: Validate metainfo
         run: |
           flatpak run --command=appstreamcli org.kde.Sdk//6.7 \
-            validate pkg/flatpak/io.github.lkm.lkm.metainfo.xml || true
+            validate pkg/flatpak/io.github.lkm.lkm.metainfo.xml
 
       - name: Prepare files for appstreamcli compose
         run: |
@@ -86,7 +86,7 @@ jobs:
       - name: Run appstreamcli compose
         run: |
           flatpak run --command=appstreamcli org.kde.Sdk//6.7 \
-            compose build-dir/files || true
+            compose build-dir/files
 
       - name: Export bundle
         if: startsWith(github.ref, 'refs/tags/')
